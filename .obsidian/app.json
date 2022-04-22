@@ -1,0 +1,12 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "spellcheck": true,
+  "vimMode": false,
+  "trashOption": "local",
+  "attachmentFolderPath": "./assets",
+  "spellcheckLanguages": [
+    "en-GB",
+    "en-US"
+  ]
+}

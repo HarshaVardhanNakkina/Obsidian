@@ -1,0 +1,103 @@
+{
+  "main": {
+    "id": "c5a05e645c1d9d29",
+    "type": "split",
+    "children": [
+      {
+        "id": "1585768e343b0ee1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "courses/bits_and_bytes_of_computer_networking/2.basics_of_networking_devices.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "deeb6b3073a79c8a",
+    "type": "split",
+    "children": [
+      {
+        "id": "3e84379bb96cb395",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "44b62c7640aa18aa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e4ec49984cf56aae",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 271
+  },
+  "right": {
+    "id": "70e884256f2bd78f",
+    "type": "split",
+    "children": [
+      {
+        "id": "38e835c9584b9622",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9939a2932ce39f57",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "courses/bits_and_bytes_of_computer_networking/2.basics_of_networking_devices.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1585768e343b0ee1",
+  "lastOpenFiles": [
+    "courses/bits_and_bytes_of_computer_networking/2.basics_of_networking_devices.md",
+    "courses/bits_and_bytes_of_computer_networking/assets/servers_clients1.png",
+    "courses/bits_and_bytes_of_computer_networking/4.Data Link Layer.md",
+    "courses/bits_and_bytes_of_computer_networking/3.physical_layer.md",
+    "courses/bits_and_bytes_of_computer_networking/1.tcp_ip_five_layer_network_model.md",
+    "courses/bits_and_bytes_of_computer_networking/4.hubs_and_switches.md",
+    "courses/bits_and_bytes_of_computer_networking/assets/layers_analogy.png",
+    "courses/bits_and_bytes_of_computer_networking/assets/full_half_duplex_comm.png",
+    "courses/bits_and_bytes_of_computer_networking/assets/network_port_lights1.png",
+    "courses/bits_and_bytes_of_computer_networking/assets/physical_layer1.png"
+  ]
+}
