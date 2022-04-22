@@ -1,7 +1,7 @@
 {
   "cssTheme": "",
-  "monospaceFontFamily": "IBM Plex Mono,Cascadia Code",
-  "interfaceFontFamily": "JetBrainsMono NF,BlexMono NF,CaskaydiaCove NF",
+  "monospaceFontFamily": "Cascadia Code,IBM Plex Mono",
+  "interfaceFontFamily": "CaskaydiaCove NF,JetBrainsMono NF,BlexMono NF",
   "baseFontSize": 14,
   "textFontFamily": "CaskaydiaCove NF"
 }
