@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "courses/bits_and_bytes_of_computer_networking/5.Network Layer.md",
+            "file": "courses/bits_and_bytes_of_computer_networking/6.Subnetting.md",
             "mode": "source",
             "source": false
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "courses/bits_and_bytes_of_computer_networking/5.Network Layer.md",
+                "file": "courses/bits_and_bytes_of_computer_networking/6.Subnetting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -90,6 +90,7 @@
   },
   "active": "1585768e343b0ee1",
   "lastOpenFiles": [
+    "courses/bits_and_bytes_of_computer_networking/6.Subnetting.md",
     "courses/bits_and_bytes_of_computer_networking/5.Network Layer.md",
     "courses/bits_and_bytes_of_computer_networking/4.Data Link Layer.md",
     "courses/bits_and_bytes_of_computer_networking/1.tcp_ip_five_layer_network_model.md",
@@ -98,7 +99,6 @@
     "courses/bits_and_bytes_of_computer_networking/3.physical_layer.md",
     "courses/bits_and_bytes_of_computer_networking/4.hubs_and_switches.md",
     "courses/bits_and_bytes_of_computer_networking/assets/layers_analogy.png",
-    "courses/bits_and_bytes_of_computer_networking/assets/full_half_duplex_comm.png",
-    "courses/bits_and_bytes_of_computer_networking/assets/network_port_lights1.png"
+    "courses/bits_and_bytes_of_computer_networking/assets/full_half_duplex_comm.png"
   ]
 }
