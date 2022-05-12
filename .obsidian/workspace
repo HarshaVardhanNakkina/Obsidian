@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "48ea5038a5c238c8",
+        "id": "ee56b31cf25bc947",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "2.Install and Configure Jenkins.md",
+            "file": "courses/Google Cloud Fundamentals - Core Infrastructure/6.Cloud Storage.md",
             "mode": "source",
             "source": false
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "2.Install and Configure Jenkins.md",
+                "file": "courses/Google Cloud Fundamentals - Core Infrastructure/6.Cloud Storage.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,17 +88,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "48ea5038a5c238c8",
+  "active": "ee56b31cf25bc947",
   "lastOpenFiles": [
-    "2.Install and Configure Jenkins.md",
-    "courses/Complete Jenkins Tutorial/1.Introduction.md",
-    "courses/Google Cloud Fundamentals - Core Infrastructure/4.Compute Engine.md",
-    "courses/Google Cloud Fundamentals - Core Infrastructure/1.Introducing Google Cloud Platform.md",
-    "courses/Google Cloud Fundamentals - Core Infrastructure/2.Identity and Access Management (IAM).md",
-    "courses/Google Cloud Fundamentals - Core Infrastructure/3.Interacting with Google Cloud Platform.md",
-    "courses/bits_and_bytes_of_computer_networking/7.Routing.md",
-    "courses/bits_and_bytes_of_computer_networking/5.Network Layer.md",
-    "courses/bits_and_bytes_of_computer_networking/4.Data Link Layer.md",
-    "courses/bits_and_bytes_of_computer_networking/6.Subnetting.md"
+    "courses/Google Cloud Fundamentals - Core Infrastructure/6.Cloud Storage.md",
+    "courses/Google Cloud Fundamentals - Core Infrastructure/10.Comparing Storage Options.md",
+    "courses/Google Cloud Fundamentals - Core Infrastructure/Getting Started with Cloud Storage and Cloud SQL.pdf",
+    "courses/Google Cloud Fundamentals - Core Infrastructure/9.Cloud Datastore.md",
+    "courses/Google Cloud Fundamentals - Core Infrastructure/8.Cloud SQL and Cloud Spanner.md",
+    "courses/Google Cloud Fundamentals - Core Infrastructure/7.Cloud Bigtable.md",
+    "courses/Google Cloud Fundamentals - Core Infrastructure/4.Virtual Private Cloud (VPC) Network.md",
+    "courses/Google Cloud Fundamentals - Core Infrastructure/5.Compute Engine.md",
+    "courses/Complete Jenkins Tutorial/2.Install and Configure Jenkins.md",
+    "courses/Complete Jenkins Tutorial/1.Introduction.md"
   ]
 }
