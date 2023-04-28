@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "889bdf2fc0d370c0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -61,8 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271,
-    "collapsed": true
+    "width": 271
   },
   "right": {
     "id": "70e884256f2bd78f",
@@ -78,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/What is Kubernetes.md",
+                "file": "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,8 +108,21 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "e3dda1f3636a0155",
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "889bdf2fc0d370c0",
   "lastOpenFiles": [
+    "Kubernetes/What is Kubernetes.md",
+    "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
+    "Introduction to Tensorflow",
     "pandas/Pandas DataFrame Methods and Attributes.md",
     "pandas/Installation and Loading data.md",
     "Next js/Next js notes.md",

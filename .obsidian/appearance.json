@@ -1,8 +1,9 @@
 {
   "cssTheme": "",
-  "monospaceFontFamily": "Cascadia Code,IBM Plex Mono",
-  "interfaceFontFamily": "IBM Plex Mono,Ubuntu Mono",
+  "monospaceFontFamily": "Cascadia Code",
+  "interfaceFontFamily": "Cascadia Mono",
   "baseFontSize": 14,
-  "textFontFamily": "IBM Plex Mono,Cascadia Mono",
-  "accentColor": ""
+  "textFontFamily": "Cascadia Mono",
+  "accentColor": "",
+  "translucency": false
 }
