@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "2ef4cf21848c050c",
+        "id": "5bc687aa17fa798e",
         "type": "tabs",
         "children": [
           {
-            "id": "e3dda1f3636a0155",
+            "id": "981466567446351b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/What is Kubernetes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "889bdf2fc0d370c0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
+                "file": "Introduction to Tensorflow/What are convolutions and pooling.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -74,7 +61,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 271
+    "width": 322.5
   },
   "right": {
     "id": "70e884256f2bd78f",
@@ -90,14 +77,24 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
+                "file": "Introduction to Tensorflow/What are convolutions and pooling.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "11f6f7018a1daa0f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Introduction to Tensorflow/What are convolutions and pooling.md"
               }
             }
           }
@@ -105,8 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 393.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -118,10 +114,25 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "889bdf2fc0d370c0",
+  "active": "981466567446351b",
   "lastOpenFiles": [
-    "Kubernetes/What is Kubernetes.md",
+    "Introduction to Tensorflow/What are convolutions and pooling.md",
+    "Untitled.canvas",
     "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
+    "Introduction to Tensorflow/Intro to Tensorflow.md",
+    "Introduction to Tensorflow/assets/Pasted image 20230428163032.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428162549.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428155807.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428155618.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428154651.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428154516.png",
+    "Introduction to Tensorflow/Pooling layers.md",
+    "Introduction to Tensorflow/assets/Pasted image 20230428153825.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428153610.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428152535.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428111352.png",
+    "Introduction to Tensorflow/assets",
+    "Kubernetes/What is Kubernetes.md",
     "Introduction to Tensorflow",
     "pandas/Pandas DataFrame Methods and Attributes.md",
     "pandas/Installation and Loading data.md",
