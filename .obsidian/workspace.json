@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "5bc687aa17fa798e",
+        "id": "7368640f18892abd",
         "type": "tabs",
         "children": [
           {
-            "id": "981466567446351b",
+            "id": "b2bbb7cd108b349d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Introduction to Tensorflow/What are convolutions and pooling.md",
+                "file": "RTSP on Web/using NGINX and HLS.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6d5f0fd03ae687aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -61,7 +74,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 322.5
+    "width": 297.5
   },
   "right": {
     "id": "70e884256f2bd78f",
@@ -77,7 +90,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Introduction to Tensorflow/What are convolutions and pooling.md",
+                "file": "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -94,7 +107,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Introduction to Tensorflow/What are convolutions and pooling.md"
+                "file": "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md"
               }
             }
           }
@@ -102,7 +115,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 393.5
+    "width": 346.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -114,12 +127,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "981466567446351b",
+  "active": "6d5f0fd03ae687aa",
   "lastOpenFiles": [
+    "RTSP on Web/using NGINX and HLS.md",
+    "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
+    "RTSP on Web",
+    "Introduction to Tensorflow/Intro to Tensorflow.md",
     "Introduction to Tensorflow/What are convolutions and pooling.md",
     "Untitled.canvas",
     "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
-    "Introduction to Tensorflow/Intro to Tensorflow.md",
     "Introduction to Tensorflow/assets/Pasted image 20230428163032.png",
     "Introduction to Tensorflow/assets/Pasted image 20230428162549.png",
     "Introduction to Tensorflow/assets/Pasted image 20230428155807.png",
