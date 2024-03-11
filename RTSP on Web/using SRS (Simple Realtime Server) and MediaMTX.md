@@ -2,8 +2,7 @@
 SRS can be run as Docker container, like this:
 
 ```bash
-docker run --rm -it -p 1935:1935 -p 1985:1985 -p 8080:8080 \
-    ossrs/srs:v6 ./objs/srs -c conf/docker.conf
+docker run --rm -it -p 1935:1935 -p 1985:1985 -p 8080:8080 ossrs/srs:v6 ./objs/srs -c conf/docker.conf
 ```
 
 A live stream can be published to this container, like this:

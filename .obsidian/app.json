@@ -5,10 +5,7 @@
   "vimMode": true,
   "trashOption": "local",
   "attachmentFolderPath": "./assets",
-  "spellcheckLanguages": [
-    "en-GB",
-    "en-US"
-  ],
+  "spellcheckLanguages": null,
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",

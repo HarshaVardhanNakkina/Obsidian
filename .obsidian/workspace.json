@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7368640f18892abd",
+        "id": "c350a1b343d6dace",
         "type": "tabs",
         "children": [
           {
-            "id": "b2bbb7cd108b349d",
+            "id": "7f40b023857a7fff",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "RTSP on Web/using NGINX and HLS.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6d5f0fd03ae687aa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
+                "file": "Kubernetes/hello minikube.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -69,6 +56,14 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "b5f5e062962fe9eb",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -90,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
+                "file": "Kubernetes/hello minikube.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,15 +102,17 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md"
+                "file": "Kubernetes/hello minikube.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 346.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -127,13 +124,25 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "6d5f0fd03ae687aa",
+  "active": "7f40b023857a7fff",
   "lastOpenFiles": [
-    "RTSP on Web/using NGINX and HLS.md",
-    "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
-    "RTSP on Web",
-    "Introduction to Tensorflow/Intro to Tensorflow.md",
+    "SSO Instructions.md",
+    "Kubernetes/hello minikube.md",
+    "Kubernetes/What is Kubernetes.md",
     "Introduction to Tensorflow/What are convolutions and pooling.md",
+    "courses/bits_and_bytes_of_computer_networking/1.tcp_ip_five_layer_network_model.md",
+    "toc.md",
+    "RTSP on Web/MediaMTX and USB webcam setup.md",
+    "docker/dockerizing a python app.md",
+    "pandas/Installation and Loading data.md",
+    "pandas/Pandas DataFrame Methods and Attributes.md",
+    "streamlit/streamlit notes.md",
+    "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
+    "RTSP on Web/using NGINX and HLS.md",
+    "RTSP on Web/RTSP on Web.md",
+    "Introduction to Tensorflow/Intro to Tensorflow.md",
+    "Next js/Next js notes.md",
+    "RTSP on Web",
     "Untitled.canvas",
     "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
     "Introduction to Tensorflow/assets/Pasted image 20230428163032.png",
@@ -148,14 +157,8 @@
     "Introduction to Tensorflow/assets/Pasted image 20230428152535.png",
     "Introduction to Tensorflow/assets/Pasted image 20230428111352.png",
     "Introduction to Tensorflow/assets",
-    "Kubernetes/What is Kubernetes.md",
     "Introduction to Tensorflow",
-    "pandas/Pandas DataFrame Methods and Attributes.md",
-    "pandas/Installation and Loading data.md",
-    "Next js/Next js notes.md",
-    "streamlit/streamlit notes.md",
     "py notes/saving a file through shell - Django.md",
-    "docker/dockerizing a python app.md",
     "courses/Google Cloud Fundamentals - Core Infrastructure/6.Cloud Storage.md",
     "courses/Google Cloud Fundamentals - Core Infrastructure/10.Comparing Storage Options.md",
     "courses/Google Cloud Fundamentals - Core Infrastructure/Getting Started with Cloud Storage and Cloud SQL.pdf",
