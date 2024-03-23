@@ -1,10 +1,21 @@
-# Before you begin
+## Before you begin
 This tutorial assumes that you have already set up `minikube`. See **Step 1** in [minikube start](https://minikube.sigs.k8s.io/docs/start/) for installation instructions.
 
 >Note: only execute the instruction in Step 1, Installation. The rest is covered in this page.
 
 You also need to install `kubectl`. See [Install tools](https://kubernetes.io/docs/tasks/tools/#kubectl) for installation instructions.
 
+## Cluster Diagram
+![[module_01_cluster.svg]]
+**The Control Plane is responsible for managing the cluster.** The Control Plane coordinates all activities in your cluster, such as scheduling applications, maintaining applications' desired state, scaling applications, and rolling out new updates.
+
+> Control Planes manage the cluster and the nodes that are used to host the running applications.
+
+**A node is a VM or a physical computer that serves as a worker machine in a Kubernetes cluster.** Each node has a Kubelet, which is an agent for managing the node and communicating with the Kubernetes control plane. The node should also have tools for handling container operations, such as [containerd](https://containerd.io/docs/) or [CRI-O](https://cri-o.io/#what-is-cri-o). A Kubernetes cluster that handles production traffic should have a minimum of three nodes because if one node goes down, both an [etcd](https://kubernetes.io/docs/concepts/overview/components/#etcd) member and a control plane instance are lost, and redundancy is compromised. You can mitigate this risk by adding more control plane nodes.
+
+When you deploy applications on Kubernetes, you tell the control plane to start the application containers. The control plane schedules the containers to run on the cluster's nodes. **Node-level components, such as the kubelet, communicate with the control plane using the [Kubernetes API](https://kubernetes.io/docs/concepts/overview/kubernetes-api/)**, which the control plane exposes. End users can also use the Kubernetes API directly to interact with the cluster.
+
+A Kubernetes cluster can be deployed on either physical or virtual machines. To get started with Kubernetes development, you can use Minikube. Minikube is a lightweight Kubernetes implementation that creates a VM on your local machine and deploys a simple cluster containing only one node. Minikube is available for Linux, macOS, and Windows systems. The Minikube CLI provides basic bootstrapping operations for working with your cluster, including start, stop, status, and delete.
 ## Create a minikube cluster
 ```powershell
 minikube start

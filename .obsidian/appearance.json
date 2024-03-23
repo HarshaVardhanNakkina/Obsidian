@@ -1,9 +1,10 @@
 {
-  "cssTheme": "",
+  "cssTheme": "Atom",
   "monospaceFontFamily": "Cascadia Code",
   "interfaceFontFamily": "Cascadia Mono",
   "baseFontSize": 14,
   "textFontFamily": "Cascadia Mono",
   "accentColor": "",
-  "translucency": false
+  "translucency": true,
+  "theme": "obsidian"
 }
