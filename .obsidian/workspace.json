@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c350a1b343d6dace",
+        "id": "e97642f8690e92c5",
         "type": "tabs",
         "children": [
           {
-            "id": "455517eb7cc05070",
+            "id": "5c9bce5387cd4bd8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/Viewing Pods and Nodes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "43996e3080d8a24a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Kubernetes/Using a Service to Expose Your App.md",
+                "file": "Kubernetes/6. Creating a cluster with kubeadm.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -99,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/Using a Service to Expose Your App.md",
+                "file": "Kubernetes/6. Creating a cluster with kubeadm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/Using a Service to Expose Your App.md"
+                "file": "Kubernetes/6. Creating a cluster with kubeadm.md"
               }
             }
           }
@@ -138,20 +125,24 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "43996e3080d8a24a",
+  "active": "5c9bce5387cd4bd8",
   "lastOpenFiles": [
+    "Kubernetes/2. hello minikube.md",
+    "Kubernetes/6. Creating a cluster with kubeadm.md",
+    "Kubernetes/5. Using a Service to Expose Your App.md",
+    "Kubernetes/4. Viewing Pods and Nodes.md",
+    "Kubernetes/3. Using kubectl to Create a Deployment.md",
+    "Kubernetes/1. What is Kubernetes.md",
+    "py notes/saving a file through shell - Django.md",
+    "Linux Notes.md",
+    "linux notes",
+    "SSO Instructions.md",
     "Kubernetes/assets/module_04_labels 1.svg",
     "Kubernetes/assets/module_04_labels.svg",
-    "Kubernetes/Viewing Pods and Nodes.md",
-    "Kubernetes/Using a Service to Expose Your App.md",
     "Kubernetes/assets/module_03_nodes.svg",
     "Kubernetes/assets/module_03_pods.svg",
-    "Kubernetes/Using kubectl to Create a Deployment.md",
-    "Kubernetes/hello minikube.md",
     "Kubernetes/assets/module_02_first_app.svg",
     "Kubernetes/assets/module_01_cluster.svg",
-    "Kubernetes/What is Kubernetes.md",
-    "SSO Instructions.md",
     "Introduction to Tensorflow/What are convolutions and pooling.md",
     "courses/bits_and_bytes_of_computer_networking/1.tcp_ip_five_layer_network_model.md",
     "toc.md",
@@ -172,14 +163,11 @@
     "Introduction to Tensorflow/assets/Pasted image 20230428162549.png",
     "Introduction to Tensorflow/assets/Pasted image 20230428155807.png",
     "Introduction to Tensorflow/assets/Pasted image 20230428155618.png",
-    "Introduction to Tensorflow/assets/Pasted image 20230428154651.png",
     "Introduction to Tensorflow/Pooling layers.md",
     "Introduction to Tensorflow/assets",
     "Introduction to Tensorflow",
-    "py notes/saving a file through shell - Django.md",
     "courses/Google Cloud Fundamentals - Core Infrastructure/6.Cloud Storage.md",
     "courses/Google Cloud Fundamentals - Core Infrastructure/10.Comparing Storage Options.md",
-    "courses/Google Cloud Fundamentals - Core Infrastructure/Getting Started with Cloud Storage and Cloud SQL.pdf",
-    "courses/Google Cloud Fundamentals - Core Infrastructure/9.Cloud Datastore.md"
+    "courses/Google Cloud Fundamentals - Core Infrastructure/Getting Started with Cloud Storage and Cloud SQL.pdf"
   ]
 }
