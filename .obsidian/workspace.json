@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "1f81562811cd07f9",
+        "id": "e97642f8690e92c5",
         "type": "tabs",
         "children": [
           {
-            "id": "0b2358473738034d",
+            "id": "5c9bce5387cd4bd8",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Kubernetes/6. Creating a cluster with kubeadm.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Kubernetes/6. Creating a cluster with kubeadm.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,7 +101,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Kubernetes/6. Creating a cluster with kubeadm.md"
+              }
             }
           }
         ],
@@ -117,30 +124,24 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "0b2358473738034d",
+  "active": "5c9bce5387cd4bd8",
   "lastOpenFiles": [
-    "Kubernetes/Running Multiple Instances of Your App.md",
-    "Kubernetes/Performing a Rolling Update.md",
-    "Kubernetes/assets/module_06_rollingupdates4.svg",
-    "Kubernetes/assets/module_06_rollingupdates3.svg",
-    "Kubernetes/assets/module_06_rollingupdates2.svg",
-    "Kubernetes/assets/module_06_rollingupdates1.svg",
-    "Kubernetes/assets/module_05_scaling2.svg",
-    "Kubernetes/assets/module_05_scaling1.svg",
-    "Kubernetes/Using a Service to Expose Your App.md",
-    "Kubernetes/Using kubectl to Create a Deployment.md",
-    "Nifty Commands.md",
-    "^1.md",
-    "docker/dockerizing a python app.md",
-    "nifty commands",
+    "Kubernetes/2. hello minikube.md",
+    "Kubernetes/6. Creating a cluster with kubeadm.md",
+    "Kubernetes/5. Using a Service to Expose Your App.md",
+    "Kubernetes/4. Viewing Pods and Nodes.md",
+    "Kubernetes/3. Using kubectl to Create a Deployment.md",
+    "Kubernetes/1. What is Kubernetes.md",
+    "py notes/saving a file through shell - Django.md",
+    "Linux Notes.md",
+    "linux notes",
     "SSO Instructions.md",
-    "Kubernetes/Viewing Pods and Nodes.md",
     "Kubernetes/assets/module_04_labels 1.svg",
     "Kubernetes/assets/module_04_labels.svg",
     "Kubernetes/assets/module_03_nodes.svg",
     "Kubernetes/assets/module_03_pods.svg",
-    "Kubernetes/hello minikube.md",
-    "Kubernetes/What is Kubernetes.md",
+    "Kubernetes/assets/module_02_first_app.svg",
+    "Kubernetes/assets/module_01_cluster.svg",
     "Introduction to Tensorflow/What are convolutions and pooling.md",
     "courses/bits_and_bytes_of_computer_networking/1.tcp_ip_five_layer_network_model.md",
     "toc.md",
@@ -156,9 +157,15 @@
     "RTSP on Web",
     "Untitled.canvas",
     "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
+    "Introduction to Tensorflow/assets/Pasted image 20230428163032.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428162549.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428155807.png",
+    "Introduction to Tensorflow/assets/Pasted image 20230428155618.png",
     "Introduction to Tensorflow/Pooling layers.md",
     "Introduction to Tensorflow/assets",
     "Introduction to Tensorflow",
+    "courses/Google Cloud Fundamentals - Core Infrastructure/6.Cloud Storage.md",
+    "courses/Google Cloud Fundamentals - Core Infrastructure/10.Comparing Storage Options.md",
     "courses/Google Cloud Fundamentals - Core Infrastructure/Getting Started with Cloud Storage and Cloud SQL.pdf"
   ]
 }
