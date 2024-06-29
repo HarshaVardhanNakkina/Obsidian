@@ -35,3 +35,113 @@ Services match a set of Pods using [labels and selectors](https://kubernetes.io/
 ![[module_04_labels 1.svg]]
 
 Labels can be attached to objects at creation time or later on. They can be modified at any time. Let's expose our application now using a Service and apply some labels.
+
+### Step 1: Creating a new Service
+
+Let’s verify that our application is running. We’ll use the `kubectl get` command and look for existing Pods:
+
+`kubectl get pods`
+
+If no Pods are running then it means the objects from the previous tutorials were cleaned up. In this case, go back and recreate the deployment from the [Using kubectl to create a Deployment](https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro#deploy-an-app) tutorial. Please wait a couple of seconds and list the Pods again. You can continue once you see the one Pod running.
+
+Next, let’s list the current Services from our cluster:
+
+`kubectl get services`
+
+We have a Service called kubernetes that is created by default when minikube starts the cluster. To create a new service and expose it to external traffic we'll use the expose command with NodePort as parameter.
+
+`kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080`
+
+Let's run again the `get serices` subcommand:
+
+`kubectl get serives`
+
+We have a Service called kubernetes that is created by default when minikube starts the cluster. To create a new service and expose it to external traffic we'll use the expose command with NodePort as parameter.
+
+`kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080`
+
+Let's run again the `get services` subcommand:
+
+`kubectl get services`
+
+We have now a running Service called kubernetes-bootcamp. Here we see that the Service received a unique cluster-IP, an internal port and an external-IP (the IP of the Node).
+
+To find out what port was opened externally (for the type: NodePort Service) we’ll run the `describe service` subcommand:
+
+`kubectl describe services/kubernetes-bootcamp`
+
+Create an environment variable called NODE_PORT that has the value of the Node port assigned:
+
+`export NODE_PORT="$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')"`  
+`echo "NODE_PORT=$NODE_PORT"`
+
+Now we can test that the app is exposed outside of the cluster using `curl`, the IP address of the Node and the externally exposed port:
+
+`curl http://"$(minikube ip):$NODE_PORT"`
+
+>**Note:** 
+>If you're running minikube with Docker Desktop as the container driver, a minikube tunnel is needed. This is because containers inside Docker Desktop are isolated from your host computer.  
+>In a separate terminal window, execute:  
+>`minikube service kubernetes-bootcamp --url`
+>The output looks like this:
+>**http://127.0.0.1:51082  
+>!  Because you are using a Docker driver on darwin, the terminal needs to be open to run it.**
+>Then use the given URL to access the app:  
+>`curl 127.0.0.1:51082`
+
+And we get a response from the server. The Service is exposed.
+
+### Step 2: Using labels
+
+The Deployment created automatically a label for our Pod. With the `describe deployment` subcommand you can see the name (the _key_) of that label:
+
+`kubectl describe deployment`
+
+Let’s use this label to query our list of Pods. We’ll use the `kubectl get pods` command with -l as a parameter, followed by the label values:
+
+`kubectl get pods -l app=kubernetes-bootcamp`
+
+You can do the same to list the existing Services:
+
+`kubectl get services -l app=kubernetes-bootcamp`
+
+Get the name of the Pod and store it in the POD_NAME environment variable:
+
+`export POD_NAME="$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')"`  
+`echo "Name of the Pod: $POD_NAME"`
+
+To apply a new label we use the `label` subcommand followed by the object type, object name and the new label:
+
+`**kubectl label pods "$POD_NAME" version=v1**`
+
+This will apply a new label to our Pod (we pinned the application version to the Pod), and we can check it with the describe pod command:
+
+`kubectl describe pods "$POD_NAME"`
+
+We see here that the label is attached now to our Pod. And we can query now the list of pods using the new label:
+
+`kubectl get pods -l version=v1`
+
+And we see the Pod.
+
+### Step 3: Deleting a service
+
+To delete Services you can use the `delete service` subcommand. Labels can be used also here:
+
+`kubectl delete service -l app=kubernetes-bootcamp`
+
+Confirm that the Service is gone:
+
+`kubectl get services`
+
+This confirms that our Service was removed. To confirm that route is not exposed anymore you can curl the previously exposed IP and port:
+
+`curl http://"$(minikube ip):$NODE_PORT"`
+
+This proves that the application is not reachable anymore from outside of the cluster. You can confirm that the app is still running with a curl from inside the pod:
+
+`kubectl exec -ti $POD_NAME -- curl http://localhost:8080`
+
+We see here that the application is up. This is because the Deployment is managing the application. To shut down the application, you would need to delete the Deployment as well
+
+Once you're ready, move on to [Running Multiple Instances of Your App](https://kubernetes.io/docs/tutorials/kubernetes-basics/scale/scale-intro/ "Running Multiple Instances of Your App").
