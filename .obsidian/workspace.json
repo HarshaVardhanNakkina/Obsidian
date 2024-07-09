@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e97642f8690e92c5",
+        "id": "62fb3e5210d14952",
         "type": "tabs",
         "children": [
           {
-            "id": "5c9bce5387cd4bd8",
+            "id": "502a3e36abde6f78",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/6. Creating a cluster with kubeadm.md",
+                "file": "Linux Notes.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.5,
-    "collapsed": true
+    "width": 297.5
   },
   "right": {
     "id": "70e884256f2bd78f",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/6. Creating a cluster with kubeadm.md",
+                "file": "Linux Notes.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/6. Creating a cluster with kubeadm.md"
+                "file": "Linux Notes.md"
               }
             }
           }
@@ -125,10 +124,10 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5c9bce5387cd4bd8",
+  "active": "502a3e36abde6f78",
   "lastOpenFiles": [
-    "Kubernetes/2. hello minikube.md",
     "Kubernetes/6. Creating a cluster with kubeadm.md",
+    "Kubernetes/2. hello minikube.md",
     "Kubernetes/5. Using a Service to Expose Your App.md",
     "Kubernetes/4. Viewing Pods and Nodes.md",
     "Kubernetes/3. Using kubectl to Create a Deployment.md",
