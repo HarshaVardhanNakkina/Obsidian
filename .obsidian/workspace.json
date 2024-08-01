@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "e97642f8690e92c5",
+        "id": "c98fb2e8131d5624",
         "type": "tabs",
         "children": [
           {
-            "id": "5c9bce5387cd4bd8",
+            "id": "ad382fd415656525",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kubernetes/6. Creating a cluster with kubeadm.md",
+                "file": "Smart Ship Operations - Paper for Symposium.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 297.5
+    "width": 297.5,
+    "collapsed": true
   },
   "right": {
     "id": "70e884256f2bd78f",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kubernetes/6. Creating a cluster with kubeadm.md",
+                "file": "Smart Ship Operations - Paper for Symposium.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Kubernetes/6. Creating a cluster with kubeadm.md"
+                "file": "Smart Ship Operations - Paper for Symposium.md"
               }
             }
           }
@@ -124,16 +125,29 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "5c9bce5387cd4bd8",
+  "active": "ad382fd415656525",
   "lastOpenFiles": [
-    "Kubernetes/2. hello minikube.md",
+    "RTSP on Web/using NGINX and HLS.md",
+    "RTSP on Web/RTSP on Web.md",
+    "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
+    "RTSP on Web/MediaMTX and USB webcam setup.md",
+    "Smart Ship Operations - Paper for Symposium.md",
+    "LangChain/LangChain Expression Language Cheatsheet.md",
+    "Kubernetes/10. Administer a Cluster/1. Administration with kubeadm.md",
+    "LangChain",
+    "Kubernetes/9. Install and Set Up kubectl on Linux.md",
+    "Kubernetes/8. Performing a Rolling Update.md",
+    "Kubernetes/10. Administer a Cluster",
+    "Linux Notes.md",
+    "Nifty Commands.md",
+    "Kubernetes/7. Running Multiple Instances of Your App.md",
     "Kubernetes/6. Creating a cluster with kubeadm.md",
+    "Kubernetes/2. hello minikube.md",
     "Kubernetes/5. Using a Service to Expose Your App.md",
     "Kubernetes/4. Viewing Pods and Nodes.md",
     "Kubernetes/3. Using kubectl to Create a Deployment.md",
     "Kubernetes/1. What is Kubernetes.md",
     "py notes/saving a file through shell - Django.md",
-    "Linux Notes.md",
     "linux notes",
     "SSO Instructions.md",
     "Kubernetes/assets/module_04_labels 1.svg",
@@ -145,27 +159,16 @@
     "Introduction to Tensorflow/What are convolutions and pooling.md",
     "courses/bits_and_bytes_of_computer_networking/1.tcp_ip_five_layer_network_model.md",
     "toc.md",
-    "RTSP on Web/MediaMTX and USB webcam setup.md",
     "pandas/Installation and Loading data.md",
     "pandas/Pandas DataFrame Methods and Attributes.md",
-    "streamlit/streamlit notes.md",
-    "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
-    "RTSP on Web/using NGINX and HLS.md",
-    "RTSP on Web/RTSP on Web.md",
-    "Introduction to Tensorflow/Intro to Tensorflow.md",
-    "Next js/Next js notes.md",
     "RTSP on Web",
     "Untitled.canvas",
-    "Introduction to Tensorflow/The 'Hello World' of neural networks.md",
     "Introduction to Tensorflow/assets/Pasted image 20230428163032.png",
     "Introduction to Tensorflow/assets/Pasted image 20230428162549.png",
     "Introduction to Tensorflow/assets/Pasted image 20230428155807.png",
     "Introduction to Tensorflow/assets/Pasted image 20230428155618.png",
-    "Introduction to Tensorflow/Pooling layers.md",
     "Introduction to Tensorflow/assets",
     "Introduction to Tensorflow",
-    "courses/Google Cloud Fundamentals - Core Infrastructure/6.Cloud Storage.md",
-    "courses/Google Cloud Fundamentals - Core Infrastructure/10.Comparing Storage Options.md",
     "courses/Google Cloud Fundamentals - Core Infrastructure/Getting Started with Cloud Storage and Cloud SQL.pdf"
   ]
 }
