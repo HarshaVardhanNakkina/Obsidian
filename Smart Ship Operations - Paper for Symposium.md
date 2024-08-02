@@ -1,3 +1,10 @@
+# Abstract
+
+This document explores various methods for streaming real-time video content from an RTSP stream to a web browser, focusing on different protocols and techniques. The primary method discussed is HTTP Live Streaming (HLS), a widely adopted protocol developed by Apple that segments video into smaller files for adaptive bitrate streaming. While HLS offers broad compatibility and high-quality video delivery, it introduces latency challenges that can impact live streaming experiences. Solutions to mitigate this latency, such as reducing fragment size or using Low Latency HLS, are also discussed.
+
+Alternative approaches include encapsulating RTSP streams into FLV format using HTTP-FLV and leveraging WebRTC for low-latency, peer-to-peer communication. Each method presents unique advantages and challenges, such as the deprecation of Flash for FLV playback or the complexity of setting up WebRTC infrastructure. The use of WebSockets for frame transmission is also explored, highlighting the need to convert video frames into browser-compatible formats like Base64 or ArrayBuffers for efficient rendering.
+
+The document further discusses techniques for displaying video frames and associated metadata, such as bounding boxes for detected objects, using the Canvas API and CSS. The challenges of dynamic resizing and interactivity in the browser are addressed, with potential future enhancements identified, including the use of OffscreenCanvas and WebGL for improved performance. Overall, this document provides a comprehensive overview of the technologies and considerations involved in streaming RTSP content to a web browser.
 # RTSP stream to browser
 
 ## Using HLS (HTTP Live Streaming)
@@ -143,19 +150,18 @@ Before sending the frame to the browser, it has to be converted into a browser-u
 <img src="data:image/jpeg;base64, <base64 encoded string...>" alt="Frame" />
 ```
 
-The encoding algorithm of base64 is straightforward. It takes as an input one binary sequence and outputs another binary sequence. It doesn't care what the original bytes stood for – be it an image or a PDF or whatever. It just goes through the original binary stuff, splits it into chunks of 6 bits, and converts every chunk into a safe textual character (or, strictly speaking, a binary sequence that represents such a character). A "safe" character refers to one from a very limited set chosen from the ASCII. Decoding performs similar binary operations but in reverse. The restored data is guaranteed to be exactly the same as before encoding.
+The base64 encoding algorithm is relatively simple. It takes a binary sequence as input and produces another binary sequence as output. The algorithm doesn't consider the nature of the original data—whether it's an image, a PDF, or something else. It simply processes the binary data, dividing it into 6-bit segments and converting each segment into a corresponding "safe" textual character. These safe characters are selected from a small subset of the ASCII character set. Decoding follows a similar process in reverse, ensuring that the original data is perfectly restored.
 
-At the same time, base64 is a costly instrument. It makes data about 33% larger in terms of memory usage. So base64 is one of these little things that make software **slow**. That's why you should use it only when it's absolutely necessary. Base64 converts every 6-bit chunk of original data into a single ASCII character. If such a character is 8 bits long, it means that you are wasting 2 bits per every original chunk which is about 33%.
+However, base64 encoding has a drawback: it increases the size of the data by about 33%, which can lead to higher memory usage and slower performance. This inefficiency arises because each 6-bit segment of data is represented by an 8-bit ASCII character, effectively adding 2 extra bits for every segment. Due to this overhead, base64 should be used only when absolutely necessary.
 
 ## ArrayBuffer and Blobs
 
-The **`ArrayBuffer`** object is used to represent a generic raw binary data buffer. It is an array of bytes, often referred to in other languages as a "byte array". First, the NumPy array has to be encoded into an image format such as JPEG, then this image has to be converted to a byte array. This byte array will received as array buffer on the front end.
+The **`ArrayBuffer`** object is designed to hold raw binary data as a generic buffer. Essentially, it's a sequence of bytes, similar to what is commonly called a "byte array" in other programming languages. To process a NumPy array for the frontend, it first needs to be encoded into an image format like JPEG, which is then converted into a byte array. This byte array is sent to the frontend as an ArrayBuffer.
 
-The contents of an `ArrayBuffer` cannot be manipulate directly; instead, it has to be converted into one of the [typed array objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a [`DataView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) object which represents the buffer in a specific format, and use that to read and write the contents of the buffer. The array buffer, in this case, is converted into an `Uint8Array` and this array is then converted into a `Blob`. Then the `createObjectURL()` static method of the [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) interface is used to create string containing a URL representing the blob. This ULR can then be used in the image tag to display the image.
+Direct manipulation of an `ArrayBuffer` is not possible; instead, it needs to be transformed into a [typed array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) or a [`DataView`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) object, which allows the data to be interpreted and managed in a specific format. For instance, the array buffer is transformed into a `Uint8Array`, which is then converted into a `Blob`. Subsequently, the `createObjectURL()` method from the [`URL`](https://developer.mozilla.org/en-US/docs/Web/API/URL) interface generates a string URL representing the blob, which can be used in an image tag to display the image.
 
 >[!note] Note:
-> Each time you call `createObjectURL()`, a new object URL is created, even if you've already created one for the same object. Each of these must be released by calling [`URL.revokeObjectURL()`](https://developer.mozilla.org/en-US/docs/Web/API/URL/revokeObjectURL_static "URL.revokeObjectURL()") when you no longer need them.
-> Browsers will release object URLs automatically when the document is unloaded; however, for optimal performance and memory usage, if there are safe times when you can explicitly unload them, you should do so.
+> Every time `createObjectURL()` is called, a unique object URL is generated, even if the same object has been used to create one before. To manage these URLs properly, it's important to release them by calling `URL.revokeObjectURL()` once they are no longer needed. Although browsers automatically release object URLs when the document is unloaded, explicitly revoking them at safe points can help optimize performance and reduce memory usage.
 
 ```javascript
 let bytes = new Uint8Array("<ArrayBuffer>")
@@ -170,10 +176,60 @@ This method of displaying the images on the browser is memory-efficient and perf
 
 # Displaying bounding boxes and inferred data
 
-Now that the frame is on the user's browser, we need to figure out a way to display bounding boxes around the detected objects and somehow, display the inferred data about the object in an efficient and user-friendly manner.
+Now that the frame is on the user's browser, we need to figure out a way to display bounding boxes around the detected objects and somehow, display the inferred data about the object in an efficient and user-friendly manner. Here is a snippet of inference data received. here the `xmin`, `ymin` etc. values represent the top-left and bottom-right position (relative to the frame) of the object detected in the frame.
 
-## Canvas
+```json
+{
+	"...": "...",
+	"list_of_targets": [
+		{
+			"xmin": "...",
+			"ymin": "...",
+			"xmax": "...",
+			"ymax": "...",
+			"type_of_target": "...",
+			"...": "..."
+		}
+	],
+	"...": "..."
+}
+```
 
-The **Canvas API** provides a means for drawing graphics via [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and the [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) [`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element. Among other things, it can be used for animation, game graphics, data visualization, photo manipulation, and real-time video processing.
+## The Canvas API
 
-The Canvas API largely focuses on 2D graphics. The [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), which also uses the `<canvas>` element, draws hardware-accelerated 2D and 3D graphics.
+The **Canvas API** enables the drawing of graphics using [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and the [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) [`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element. It is versatile, allowing for tasks such as animation, game graphics, data visualization, image editing, and real-time video processing.
+
+While the Canvas API is primarily geared towards 2D graphics, the [WebGL API](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API), which also operates through the `<canvas>` element, is designed for rendering both 2D and 3D graphics with hardware acceleration.
+
+Drawing simple on a basic canvas element is not going to help for the following reasons:
+- Elements drawn on the canvas are not interactive, they can not have HTML events on them.
+- Elements can not update their positions dynamically, to update a position of an element on a canvas, the canvas has to wiped clean and painted again with element's new position which may look like the image is flickering and it is not a good user experience.
+- Elements drawn on a basic canvas cannot be animated
+
+Although canvas API looks promising, it takes some expertise to set up the graphics using WebGL. This approach not necessarily benefit our use-case significantly but it is worth exploring at later point of time.
+
+## CSS
+
+The `x,y` coordinates received for the objects are relative the frame, meaning, if the frame's resolution is `1920x1080`, the objects' coordinates will be within `(0,0)` to `(1920,1080)` range.
+
+Using CSS positioning an HTML element can be used a container for the frame and the objects. A container element can be created in which the frame and bounding boxes can be absolutely positioned to the container but the problem here is that the device you viewing the output in, may not have the same resolution the camera. For example, the camera can capture the frame at `1920x1080` resolution but the device the application is running on, might have a resolution of `1280x720`.
+
+This problem can be solved by mapping the coordinates of the bounding boxes from their original resolution to the device's resolution. Once these new coordinates are calculated, bounding boxes can be absolutely positioned to the container. Since the image is styled to take all the available width and height, it's parent (the container) also takes the same width and height and therefore the bounding boxes, most certainly, will be drawn at same position as they were originally inferred.
+
+Since, each object is tracked by the AI application, it is assigned a unique id which will not change for as long as it is in the frame. This unique id can be used to update the corresponding object's position as it moves in the frame. Therefore, the bounding box used for each object need not be re-created for every update. Since the bounding box is an HTML element now, it can have HTML events for user interactions, and it can be animated like a regular HTML element for smooth user experience.
+
+# Future Scope
+
+- **Record and Replay:** Each incoming frame can be saved along with it's inference data. This data can be used for re-create a particular scenario.
+- **Using the Canvas API:** A new API has been implemented called `OffscreenCanvas` which makes use of the browser's worker thread which takes the load off the main thread. This method can be explored to display the frame, once this new API comes to all the browsers.
+- **Using the WebGL API:** The WebGL API uses the GPU. This API can be used to render the frame, bounding boxes for better performance.
+
+# Conclusion
+
+In conclusion, streaming real-time video content from an RTSP stream to a browser involves a complex interplay of various protocols and technologies, each with its unique strengths and challenges. The use of HLS (HTTP Live Streaming) provides a robust solution for delivering high-quality video content across a wide range of devices, thanks to its compatibility with the HTTP protocol and its ability to adapt video quality based on network conditions. However, its inherent latency poses a challenge for live streaming, which can be mitigated to some extent by reducing fragment size or using advanced techniques like Low Latency HLS.
+
+Alternative approaches such as encapsulating RTSP into FLV or using WebRTC offer different benefits, such as lower latency and direct browser-to-browser communication, but they come with their own set of complexities and potential issues, particularly in terms of setup and compatibility. WebSockets, while offering real-time, bidirectional communication, require careful handling of data formats, such as converting frames to Base64 or using ArrayBuffers and Blobs for efficient transmission.
+
+Displaying video frames in the browser, especially with added elements like bounding boxes for object detection, further complicates the process. The use of the Canvas API and CSS for rendering these elements provides flexibility and interactivity, though it requires precise management of coordinates and scaling to ensure accurate representation across devices with varying resolutions.
+
+As technology evolves, exploring advanced APIs like OffscreenCanvas and WebGL could offer enhanced performance, particularly by leveraging GPU resources for rendering. Additionally, the possibility of implementing features like record and replay could significantly extend the functionality and usability of such a streaming setup, making it a versatile tool for various applications.
