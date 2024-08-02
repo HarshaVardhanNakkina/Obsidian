@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c98fb2e8131d5624",
+        "id": "837e8be63e69bafc",
         "type": "tabs",
         "children": [
           {
-            "id": "ad382fd415656525",
+            "id": "0de893b88b99b126",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -125,14 +125,15 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "ad382fd415656525",
+  "active": "0de893b88b99b126",
   "lastOpenFiles": [
+    "SSO Instructions.md",
+    "LangChain/LangChain Expression Language Cheatsheet.md",
+    "Smart Ship Operations - Paper for Symposium.md",
     "RTSP on Web/using NGINX and HLS.md",
     "RTSP on Web/RTSP on Web.md",
     "RTSP on Web/using SRS (Simple Realtime Server) and MediaMTX.md",
     "RTSP on Web/MediaMTX and USB webcam setup.md",
-    "Smart Ship Operations - Paper for Symposium.md",
-    "LangChain/LangChain Expression Language Cheatsheet.md",
     "Kubernetes/10. Administer a Cluster/1. Administration with kubeadm.md",
     "LangChain",
     "Kubernetes/9. Install and Set Up kubectl on Linux.md",
@@ -149,7 +150,6 @@
     "Kubernetes/1. What is Kubernetes.md",
     "py notes/saving a file through shell - Django.md",
     "linux notes",
-    "SSO Instructions.md",
     "Kubernetes/assets/module_04_labels 1.svg",
     "Kubernetes/assets/module_04_labels.svg",
     "Kubernetes/assets/module_03_nodes.svg",
